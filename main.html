@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dien dan tin hoc</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet"> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            function giaiBac1() {
+                var a = document.getElementById("ida").value 
+                var b = document.getElementById("idb").value 
+                a = parseFloat(a)
+                b = parseFloat(b) 
+                if(a == 0) {
+                    if(b == 0) {
+                        alert('Vo so nghiem')
+                    }
+                    else 
+                        alert('vo nghiem')
+                }
+                else {
+                alert('Nghiem x = '+ (-b/a))
+                }
+            } 
+            function doimaunen() {
+                var color = document.getElementById("colorname").value
+                var body = document.getElementById("bodyid")
+                body.style.backgroundColor = color 
+            } 
+            var timer = null;
+            var left = 0, topball = 0, incX = 5, incY = 5
+            function play() {
+                var ball = document.getElementById("ball")
+                timer = setInterval(function() {
+                    left += incX
+                    topball += incY
+                    ball.style.left = left + "px"
+                    ball.style.top = topball + "px"
+                },100)
+            } 
+            $(document).ready(function(){
+                $("#gototop").hide()
+                $(window).scroll(function(){
+                    if($(this).scrollTop() >= 100)
+                     $("#gototop").show("slow")
+                    else 
+                     $("#gototop").hide("slow")
+                }) 
+                $("#gototop").click(function() {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 1000)
+                })
+            })
+        </script>
+    </head> 
+    <body id="bodyid"> 
+        <div>
+            <a id="gototop" href="javascript:;">Go to top</a>
+        </div>
+        <div>
+            <input type="button" value="Play" onclick="play()">
+            <input type="button" value="Stop">
+        </div>
+        <div class="ballarea">
+            <img id="ball" src="football.jpg" alt="ball">
+        </div>
+        <input type="text" id="colorname"
+        onchange="doimaunen()"
+        placeholder="Nhap ten mau va nhan enter">
+        <h1>ax+b=0</h1> 
+        <input type="text" id="ida" placeholder="a = "> 
+        <input type="text" id="idb" placeholder="b = ">
+        <input type="button" value="giai" onclick="giaiBac1()">
+        <section class="nav clearfix">
+            <ul class="afloat">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catgeory</a></li>
+                <li><a href="#">Program</a></li>
+                <li><a href="#">About</a></li>
+            </ul> 
+            <ul class="right">
+                <li><a href="#"><i class="fa fa-bell"></i></a></li>
+                <li><a href="#"><i class="fa fa-user"></i></a></li>
+            </ul>
+        </section> 
+        <section class="banner">
+            <div>
+            <img width="120px" src="Logo_Đại_học_Mở_TPHCM.png" alt="Logo">
+            </div>
+            <h1>Forum of Information System</h1>
+        </section> 
+        <section class="ad">
+            <div class="ad-a">
+                <h1>Contact for ad</h1>
+            </div>
+            <div class="ad-b">
+                <h1>Contact for ad</h1>
+            </div>
+        </section>
+        <section class="content"> 
+            <div class="subject">
+            <h1>Basic Programming</h1>
+            <div class="posts"> 
+                <div class="post">
+                <div class="col col1">
+                    <img src="Logo_Đại_học_Mở_TPHCM.png" alt="logo">
+                </div>
+                <div class="col col2">
+                    <a href="#">If/else structure</a>
+                </div>
+                <div class="col col3">
+                    <ul>
+                        <li>Views: 15</li>
+                        <li>Comments: 20</li>
+                    </ul>
+                </div>
+                <div class="col col4">
+                    <p>Comment... at... by..</p>
+                </div>
+                </div>
+            </div> 
+            <div class="posts"> 
+                <div class="post">
+                <div class="col col1">
+                    <img src="Logo_Đại_học_Mở_TPHCM.png" alt="logo">
+                </div>
+                <div class="col col2">
+                    <a href="#">If/else structure</a>
+                </div>
+                <div class="col col3">
+                    <ul>
+                        <li>Views: 15</li>
+                        <li>Comments: 20</li>
+                    </ul>
+                </div>
+                <div class="col col4">
+                    <p>Comment... at... by..</p>
+                </div>
+                </div>
+            </div>
+            <div class="posts"> 
+                <div class="post">
+                <div class="col col1">
+                    <img src="Logo_Đại_học_Mở_TPHCM.png" alt="logo">
+                </div>
+                <div class="col col2">
+                    <a href="#">If/else structure</a>
+                </div>
+                <div class="col col3">
+                    <ul>
+                        <li>Views: 15</li>
+                        <li>Comments: 20</li>
+                    </ul>
+                </div>
+                <div class="col col4">
+                    <p>Comment... at... by..</p>
+                </div>
+                </div>
+            </div>
+            </div> 
+            <div class="subject">
+                <h1>Programming Techniques</h1>
+                <div class="posts"> 
+                    <div class="post">
+                    <div class="col col1">
+                        <img src="Logo_Đại_học_Mở_TPHCM.png" alt="logo">
+                    </div>
+                    <div class="col col2">
+                        <a href="#">If/else structure</a>
+                    </div>
+                    <div class="col col3">
+                        <ul>
+                            <li>Views: 15</li>
+                            <li>Comments: 20</li>
+                        </ul>
+                    </div>
+                    <div class="col col4">
+                        <p>Comment... at... by..</p>
+                    </div>
+                    </div>
+                </div> 
+                <div class="posts"> 
+                    <div class="post">
+                    <div class="col col1">
+                        <img src="Logo_Đại_học_Mở_TPHCM.png" alt="logo">
+                    </div>
+                    <div class="col col2">
+                        <a href="#">If/else structure</a>
+                    </div>
+                    <div class="col col3">
+                        <ul>
+                            <li>Views: 15</li>
+                            <li>Comments: 20</li>
+                        </ul>
+                    </div>
+                    <div class="col col4">
+                        <p>Comment... at... by..</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="posts"> 
+                    <div class="post">
+                    <div class="col col1">
+                        <img src="Logo_Đại_học_Mở_TPHCM.png" alt="logo">
+                    </div>
+                    <div class="col col2">
+                        <a href="#">If/else structure</a>
+                    </div>
+                    <div class="col col3">
+                        <ul>
+                            <li>Views: 15</li>
+                            <li>Comments: 20</li>
+                        </ul>
+                    </div>
+                    <div class="col col4">
+                        <p>Comment... at... by..</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+        <section class="footer">
+            <ul>
+                <li>Fauclty of Information Techniques</li>
+                <li>HCM City </li>
+                <li><a href="http://www.oe.edu.vn">www.oe.edu.vn</a></li>
+                <li><a href="Mailto:fce@oe.edu.vn">fsc@oe.edu.vn</a></li>
+            </ul>
+        </section>
+    </body>
+</html>

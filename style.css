@@ -1,0 +1,134 @@
+* { 
+    font-family: Arial, Helvetica, sans-serif;
+}
+section.nav{
+    background-color: cadetblue;
+}
+section.nav > ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+section.nav > ul > li{
+   
+    border-right: 1px solid white;
+    min-width: 120px;
+    text-align: center;
+}
+section.nav > ul > li > a{
+    text-decoration: none;
+    display: block;
+    padding: 15px 8px ;  
+}
+section.nav > ul >li:hover{
+    background-color: darkblue;
+    color: white;
+} 
+ul.afloat > li:last-child {
+    border-right: none;
+}
+.afloat {
+    float: left;
+} 
+.right {
+    float: right;
+} 
+.clearfix {
+    overflow: hidden;
+}
+section.banner {
+    background-color: darkblue;
+    display: flex;
+}
+section.banner > h1 {
+    color: white;
+    position: relative;
+    left: 30%;
+}
+section.content {
+    width: 70%;
+    margin: 5px auto;
+}
+div.subject {
+    margin-top: 10px;
+}
+div.post {
+    background-color: lightblue;
+}
+div.subject > h1 {
+    color: white;
+    background-color: darkblue;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px 10px 0 0 ;
+} 
+div.post {
+    display: flex;
+    border-bottom: 1px solid white
+}
+.col1 {
+    width: 10%;
+}
+.col2 {
+    width: 40%;
+}
+.col3 {
+    width: 20%;
+}
+.col4 {
+    width: 30%;
+    direction: rtl;
+}
+.col {
+    padding: 10px;
+}
+.col > img {
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+} 
+ul, p {
+    margin: 0px;
+    list-style-type: none;
+}
+section.ad > div {
+    position: fixed;
+    background: linear-gradient(lightblue, darkblue);
+    padding: 80px 5px;
+    border-radius: 10px;
+}
+.ad-a {
+    left: 0;
+}
+.ad-b {
+    right: 0;
+}
+section.footer {
+    background-image: url(Logo_Đại_học_Mở_TPHCM.png); 
+    background-repeat: no-repeat;
+    background-position:center right; 
+    background-color: lightblue;
+    padding: 15px;
+} 
+div.ballarea {
+    background-color: gray;
+    width: 500px;
+    height: 300px;
+    position: relative;
+}
+#ball {
+    width: 80px;
+    position: absolute
+} 
+a#gototop {
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    background-color: blue;
+    color: white;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+}
